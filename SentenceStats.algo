@@ -1,0 +1,22 @@
+ALGORITHM sentencestats
+VAR
+    num_words: INTEGER := 0;
+    num_vowels: INTEGER := 0;
+    sent_length: INTEGER := 0;
+    current_charcter: INTEGER;
+    sentence:STRING;
+BEGIN
+    READ (sentence)
+    WHILE (current_charcter < sentence.length) DO
+        sent_length:= sent_length +1;
+        IF (current_charcter:=' ') THEN
+        num_words:= num_words+1;
+        ELSE_IF (current_charcter:='a' or 'e' or 'i' or 'o' or 'u') THEN
+        num_vowels:= num_vowels+1;
+        ELSE
+        write(num_words)
+        write(num_vowels)
+        write(sent_length)
+        END_IF
+    END_WHILE
+END
